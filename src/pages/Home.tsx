@@ -58,7 +58,7 @@ const Home = () => {
   return (
     <div>
       {status === 'error' ? (
-        <div className="content-error">
+        <div className="content-notice">
           <h2>Произошла ошибка</h2>
           <p>
             К сожалению, не удалось получить котиков. Попробуйте повторить попытку позже.

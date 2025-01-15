@@ -8,7 +8,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.content-error {
+.content-notice {
   display: flex;
   flex-direction: column;
   justify-content: center;
