@@ -23,11 +23,10 @@ export const catSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchCats.fulfilled, (state, action) => {
-        state.cats = action.payload;
+        state.cats = [...state.cats, ...action.payload];
         state.status = Status.SUCCESS;
       })
       .addCase(fetchCats.pending, (state) => {
-        state.cats = [];
         state.status = Status.LOADING;
       })
       .addCase(fetchCats.rejected, (state) => {

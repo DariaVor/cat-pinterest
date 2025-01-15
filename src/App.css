@@ -24,3 +24,10 @@ body {
   justify-content: center;
   margin-top: 58px;
 }
+
+.loading-indicator {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
