@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# Кошачий Пинтерест
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание проекта
 
-Currently, two official plugins are available:
+**Кошачий Пинтерест** - это веб-приложение, предназначенное для просмотра милых котиков с возможностью добавления их в избранное.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Основные функции:
 
-## Expanding the ESLint configuration
+- **Просмотр всех котиков:** На главной странице отображаются все доступные котики с возможностью прокрутки.
+- **Любимые котики:** Котиков можно добавлять в избранное.
+- **Навигация:** Возможность переключаться между вкладками "Все котики" и "Любимые котики".
+- **Адаптивная верстка:** Приложение поддерживает адаптивную верстку для корректного отображения на мобильных устройствах.
+- **Бесконечная прокрутка:** Реализована бесконечная прокрутка котиков на главной странице.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Технологический стек:
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend:**
+  - TypeScript
+  - React
+  - React Router для навигации
+  - Redux Toolkit для управления состоянием
+  - Axios для работы с API
+  - CSS Modules для стилизации
+  - Content Loader для анимации загрузки
+  - Vite для сборки и разработки
+- **API:**
+  - [TheCatAPI](https://thecatapi.com) для получения данных о котиках
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Установка и настройка
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Клонирование репозитория:**
+    ```bash
+    git clone git@github.com:DariaVor/frontend-challenge.git
+    cd frontend-challenge
+    ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. **Установка зависимостей:**
+    ```bash
+    npm install
+    ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Запуск приложения:**
+    ```bash
+    npm run dev
+    ```
+
+4. **Откройте приложение в браузере**
+
+## Использование
+
+### Просмотр всех котиков
+
+1. На главной странице отображаются все котики. Прокручивайте страницу для загрузки новых котиков.
+2. Нажмите на кнопку, чтобы добавить котика в список любимых.
+
+### Просмотр любимых котиков
+
+1. Перейдите на вкладку "Любимые котики", чтобы увидеть всех котиков, которых вы добавили в избранное.
+2. Нажмите на кнопку, чтобы удалить котика из избранного.
