@@ -1,6 +1,17 @@
-const CatBlock = ({id}) => {
+import styles from './CatBlock.module.css';
+
+type CatBlockProps = {
+  id: string;
+  url: string;
+  width: number;
+  height: number;
+};
+
+const CatBlock: React.FC<CatBlockProps> = ({ url }) => {
   return (
-    <div>{id}</div>
-  )
-}
-export default CatBlock
+    <div className={styles.root}>
+      <img src={url} alt='Кот' />
+    </div>
+  );
+};
+export default CatBlock;

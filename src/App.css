@@ -7,3 +7,20 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.content-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 225px);
+  gap: 48px;
+  justify-content: center;
+  margin-top: 58px;
+}
