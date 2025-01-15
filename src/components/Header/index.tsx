@@ -5,7 +5,8 @@ const Header: React.FC = () => {
   return (
     <div className={styles.root}>
       <NavLink
-        to='/'
+        to='/cat-pinterest/'
+        end
         className={({ isActive }) =>
           `${styles.linkButton} ${isActive ? styles.active : ''}`
         }
@@ -13,7 +14,7 @@ const Header: React.FC = () => {
         Все котики
       </NavLink>
       <NavLink
-        to='/favorites'
+        to='/cat-pinterest/favorites'
         className={({ isActive }) =>
           `${styles.linkButton} ${isActive ? styles.active : ''}`
         }

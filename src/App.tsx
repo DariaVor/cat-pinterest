@@ -8,7 +8,7 @@ import MainLayout from './layouts/MainLayout';
 const App: React.FC = () => {
   return (
     <Routes>
-      <Route path='/' element={<MainLayout />}>
+      <Route path='/cat-pinterest/' element={<MainLayout />}>
         <Route path='' element={<Home />} />
         <Route path='favorites' element={<Favorites />} />
         <Route path='*' element={<NotFound />} />

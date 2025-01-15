@@ -30,8 +30,8 @@
 
 1. **Клонирование репозитория:**
     ```bash
-    git clone git@github.com:DariaVor/frontend-challenge.git
-    cd frontend-challenge
+    git clone git@github.com:DariaVor/cat-pinterest.git
+    cd cat-pinterest
     ```
 
 2. **Установка зависимостей:**
