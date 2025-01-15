@@ -1,0 +1,48 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  p {
+    font-size: 24px;
+    margin: 30px;
+    color: #333;
+  }
+}
+
+.homeLink {
+  padding: 10px 20px;
+  background-color: #2294f2;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: color 0.3s;
+}
+
+.homeLink:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .root p {
+    font-size: 20px;
+  }
+
+  .homeLink {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .root p {
+    font-size: 16px;
+  }
+
+  .homeLink {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
