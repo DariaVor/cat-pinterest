@@ -1,17 +1,20 @@
 import './App.css';
 import { Route, Routes } from 'react-router';
 import Home from './pages/Home';
-import Likes from './pages/Likes';
+import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
+import MainLayout from './layouts/MainLayout';
 
-function App() {
+const App: React.FC = () => {
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/likes' element={<Likes />} />
-      <Route path='*' element={<NotFound />} />
+      <Route path='/' element={<MainLayout />}>
+        <Route path='' element={<Home />} />
+        <Route path='favorites' element={<Favorites />} />
+        <Route path='*' element={<NotFound />} />
+      </Route>
     </Routes>
   );
-}
+};
 
 export default App;
