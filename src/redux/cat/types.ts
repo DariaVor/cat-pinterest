@@ -3,6 +3,7 @@ export type Cat = {
   url: string;
   width: number;
   height: number;
+  liked?: boolean;
 };
 
 export enum Status {

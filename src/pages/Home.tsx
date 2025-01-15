@@ -15,7 +15,7 @@ const Home = () => {
     dispatch(fetchCats({ limit: 15, page: 1 }));
   }, [dispatch]);
 
-  const skeletons = [...Array(5)].map((_, index) => <Skeleton key={index} />);
+  const skeletons = [...Array(10)].map((_, index) => <Skeleton key={index} />);
   const loadedCats = cats.map((cat: Cat) => <CatBlock key={cat.id} {...cat} />);
 
   return (

@@ -16,3 +16,24 @@
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+.heartButton {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  border: none;
+  opacity: 0;
+}
+
+.root:hover .heartButton {
+  opacity: 1;
+}
+
+.heartOutline,
+.heartFilled {
+  width: 32px;
+  height: 32px;
+}

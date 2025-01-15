@@ -14,6 +14,11 @@ export const catSlice = createSlice({
     setCats: (state, action: PayloadAction<Cat[]>) => {
       state.cats = action.payload;
     },
+    toggleLike: (state, action: PayloadAction<string>) => {
+      state.cats = state.cats.map((cat) =>
+        cat.id === action.payload ? { ...cat, liked: !cat.liked } : cat
+      );
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -32,6 +37,6 @@ export const catSlice = createSlice({
   },
 });
 
-export const { setCats } = catSlice.actions;
+export const { setCats, toggleLike } = catSlice.actions;
 
 export default catSlice.reducer;
